@@ -23,7 +23,6 @@ export default {
     // console.log(GLTFLoader);
     const loader = new GLTFLoader();
     console.log(loader);
-    // loader.load("../assets/111.glb");
     // 创建场景
     this.scene = new THREE.Scene();
 
