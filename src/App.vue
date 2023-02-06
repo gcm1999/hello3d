@@ -1,14 +1,16 @@
 <template>
   <div id="app">
-    <mapVue></mapVue>
+    <!-- <mapVue></mapVue> -->
+    <threeBasic></threeBasic>
   </div>
 </template>
 
 <script>
 import mapVue from "./components/map.vue";
+import threeBasic from "./components/threeBasic.vue";
 export default {
   name: "App",
-  components: { mapVue },
+  components: { mapVue, threeBasic },
 };
 </script>
 

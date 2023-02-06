@@ -31,7 +31,9 @@ export default {
   },
   methods: {
     Awake() {
-      const cont = document.getElementById("cont");
+      // const cont = document.getElementById("cont");
+      const cont = this.$refs.cont;
+      console.log(this.$refs);
 
       this.scene = new THREE.Scene();
       this.scene.background = new THREE.Color(0x222222);
@@ -61,12 +63,16 @@ export default {
       );
       this.scene.add(gh);
 
+      // 添加物体
+      // 创建几何体
       const geometry = new THREE.BoxGeometry(1, 1, 1);
       const material = new THREE.MeshBasicMaterial({ color: 0x00ff00 });
+      // 根据几何体创建物体
       const cube = new THREE.Mesh(geometry, material);
+      // 讲几何体添加到场景
       this.scene.add(cube);
 
-      // 渲染
+      // 初始化渲染器
       this.renderer = new THREE.WebGL1Renderer({ antialias: true });
       this.renderer.setPixelRatio(window.devicePixelRatio);
       this.renderer.setSize(window.innerWidth, window.innerHeight);
